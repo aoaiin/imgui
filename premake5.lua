@@ -1,4 +1,4 @@
-project "ImGui"
+﻿project "ImGui"
     kind "StaticLib"
     language "C++"
     cppdialect "C++17"
@@ -19,7 +19,18 @@ project "ImGui"
         "imstb_textdit.h",
         "imstb_truetype.h",
         "imgui_demo.cpp",
-        "imgui_tables.cpp"                --For the newly "table" functions which introduced form ImGui v1.73
+        "imgui_tables.cpp",                --For the newly "table" functions which introduced form ImGui v1.73
+
+        "imgui_impl_glfw.h",
+        "imgui_impl_glfw.cpp",
+        "imgui_impl_opengl3_loader.h",
+        "imgui_impl_opengl3.h",
+        "imgui_impl_opengl3.cpp"
+    }
+
+    includedirs	-- 项目的附加包含目录
+	{
+		"../GLFW/include",
     }
 
     filter "system:windows"
